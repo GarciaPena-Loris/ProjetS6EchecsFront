@@ -1,0 +1,248 @@
+.container-general {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.plateau-gauche {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  background-color: #262421;
+}
+
+.elements-droite {
+  width: 40%;
+  background-color: #262421;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.consigne {
+  margin-top: 2%;
+  padding: 0 2%;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--couleur-theme);
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 1% 1%;
+}
+
+.boutons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+}
+
+.groupe-butons {
+  display: flex;
+  flex-direction: column;
+}
+
+/* css button custom from  https://www.joshwcomeau.com/animation/3d-button/*/
+.pushable {
+  border: none;
+  border-radius: 12px;
+  padding: 0;
+  margin: 2% 0;
+  cursor: pointer;
+}
+
+.pushable-clair {
+  background: #d6bd91;
+}
+
+.pushable-fonce {
+  background: #8b623e;
+}
+
+.front {
+  display: block;
+  padding: 0.3rem 1rem;
+  border-radius: 12px;
+  font-size: 1.5rem;
+  background: #b58863;
+  color: rgb(255, 255, 255);
+  transform: translateY(-4px);
+}
+
+.fronts-clair {
+  background: #f0d9b5;
+  color: rgb(53, 53, 53);
+}
+
+.fronts-fonce {
+  background: #b58863;
+  color: rgb(255, 255, 255);
+}
+
+.custom {
+  font-size: 1rem;
+}
+
+.pushable:active .front {
+  transform: translateY(-2px);
+}
+
+.pushable:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.front {
+  transition:
+    transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.pushable:hover .front {
+  box-shadow: rgb(230, 199, 152) 0px 0px 0px 2px;
+  transform: translateY(-10px);
+  transition:
+    transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.pushable:active .front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+/* --- */
+
+.titre-boutons {
+  color: white;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+
+.reponse-input[type="text"] {
+  padding: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  border: 3px solid #ccc;
+  border-radius: 5px;
+  width: 80%;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.reponse-input[type="text"]:focus {
+  border-color: var(--couleur-theme);
+}
+
+.button-clean {
+  background-color: rgb(170, 21, 21);
+}
+
+.texte-clean {
+  background-color: var(--couleur-erreur);
+}
+
+.button-replay {
+  background-color: #9c63d1;
+}
+
+.texte-replay {
+  background-color: #af80dc;
+}
+
+.stack {
+  margin-top: 2%;
+}
+
+.actual-bouton {
+  width: 30%;
+  margin-top: 2%;
+  padding: 2% 0;
+  font-size: 1.2vw;
+}
+
+.response {
+  width: 80%;
+  height: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--police-ecriture);
+  font-size: 1.2rem;
+  color: white;
+  padding: 5px 15px;
+  opacity: 0;
+  border-radius: 10px;
+  background-color: var(--couleur-theme);
+  transition: all 0.5s ease-in-out;
+}
+
+.show {
+  opacity: 1;
+}
+
+.incorrect {
+  background-color: var(--couleur-erreur-fonce);
+}
+
+.language-selector {
+  padding: 8px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #f2f2f2;
+  border: none;
+  cursor: pointer;
+}
+
+.MuiFormControlLabel-root {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+
+@media screen and (max-width: 768px) {
+  .container-general {
+    flex-direction: column;
+  }
+
+  .groupe-butons {
+    flex-direction: row;
+  }
+
+  .boutons {
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 2% 0;
+    width: 100%;
+  }
+
+  .pushable .front {
+    font-size: 0.8rem;
+  }
+
+  .plateau-gauche {
+    width: 100%;
+  }
+
+  .elements-droite {
+    width: 100%;
+  }
+
+  .consigne {
+    font-size: 1.5rem;
+  }
+  .response {
+    margin: 2% 0;
+    font-size: 1.2rem;
+  }
+}

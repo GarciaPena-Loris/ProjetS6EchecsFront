@@ -1,0 +1,150 @@
+label {
+    color: whitesmoke;
+}
+
+h1 {
+    color: #EDEFF2;
+}
+
+
+nav ul {
+    height: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* css button custom from  https://www.joshwcomeau.com/animation/3d-button/*/
+.bouton-3D {
+    border: none;
+    border-radius: 12px;
+    background: var(--couleur-theme-fonce);
+    padding: 0;
+    margin: 2% 0;
+    cursor: pointer;
+}
+
+.texte-3D {
+    display: block;
+    padding: 0.3rem 1rem;
+    border-radius: 12px;
+    font-size: 1.5rem;
+    background: var(--couleur-theme);
+    color: rgb(255, 255, 255);
+    transform: translateY(-4px);
+}
+
+.bouton-3D[disabled] {
+    background: gray;
+    cursor: not-allowed;
+}
+
+.bouton-3D[disabled] .texte-3D {
+    transform: none;
+    background: darkgray;
+}
+
+.bouton-3D[disabled]:hover .texte-3D {
+    transform: none;
+}
+
+.bouton-3D:active .texte-3D {
+    transform: translateY(-2px);
+}
+
+.bouton-3D:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.texte-3D {
+    transition:
+        transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.bouton-3D:hover .texte-3D {
+    transform: translateY(-6px);
+    transition:
+        transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.bouton-3D:active .texte-3D {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+
+/* --- */
+
+.bouton-3D-red {
+    border: none;
+    border-radius: 12px;
+    background: var(--couleur-erreur);
+    padding: 0;
+    margin: 2% 0;
+    cursor: pointer;
+}
+
+.texte-3D-red {
+    display: block;
+    padding: 0.3rem 1rem;
+    border-radius: 12px;
+    font-size: 1.5rem;
+    background: var(--couleur-erreur-fonce);
+    color: rgb(255, 255, 255);
+    transform: translateY(-4px);
+}
+
+.bouton-3D-red[disabled] {
+    background: gray;
+    cursor: not-allowed;
+}
+
+.bouton-3D-red[disabled] .texte-3D-red {
+    transform: none;
+    background: darkgray;
+}
+
+.bouton-3D-red[disabled]:hover .texte-3D-red {
+    transform: none;
+}
+
+.bouton-3D-red:active .texte-3D-red {
+    transform: translateY(-2px);
+}
+
+.bouton-3D-red:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.texte-3D-red {
+    transition:
+        transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.bouton-3D-red:hover .texte-3D-red {
+    transform: translateY(-6px);
+    transition:
+        transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.bouton-3D-red:active .texte-3D-red {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+
+/* --- */
+
+:root {
+    --couleur-theme: #7e9d4e;
+    --couleur-theme-fonce: #5c742f;
+    --couleur-erreur: #992a26;
+    --couleur-erreur-fonce: #c63935;
+    --police-ecriture: 'Helvetica Neue', sans-serif;
+}

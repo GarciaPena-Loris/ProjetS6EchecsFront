@@ -1,0 +1,154 @@
+.exercice-page {
+  margin: 0 10vw;
+  color: #fff;
+}
+
+.exercice-title {
+  font-size: 4em;
+  margin: 0;
+}
+
+.exercice-description {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.levels-container {
+  margin-top: 5%;
+  padding: 2% 2%;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  background-color: #282522;
+  margin-bottom: 5%;
+}
+
+.level-title-header {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.level-title {
+  font-size: 2em;
+  font-weight: bold;
+  width: 50%;
+}
+
+.level-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1.3em;
+  margin-bottom: 4%;
+}
+
+.level-name,
+.level-description {
+  letter-spacing: 1.3px;
+}
+
+.level-name-container {
+  margin-top: 2%;
+}
+
+.container1 {
+  width: 15%;
+}
+
+.container2 {
+  width: 55%;
+}
+
+.container3 {
+  width: 15%;
+}
+
+.level-description {
+  padding: 0 20%;
+}
+
+.level-button {
+  margin-top: 2%;
+  width: 40%;
+  height: 45px;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 800;
+  color: #fff;
+  background-color: #7e9d4e;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.level-button:hover {
+  background-color: #7e9d4e;
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.barxp-div-exo {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20%;
+}
+
+.progression-xp {
+  font-size: large;
+}
+
+.solid {
+  width: 200px;
+}
+
+.points_phone {
+  display: none;
+    width: 2px;
+    margin-top: 5%;
+  }
+
+
+@media screen and (max-width: 768px) {
+  .exercice-page {
+    margin: 0 0;
+  }
+
+  .points_phone {
+    display: block;
+  }
+
+  .barxp-div-exo {
+    margin: 0 0;
+  }
+
+  .exercice-description {
+    font-size: 1em;
+    margin: 5% 0;
+  }
+
+  .level-title-header {
+    display: none;
+  }
+
+  .level-row {
+    flex-direction: column;
+  }
+
+  .level-name {
+    margin-bottom: 2%;
+  }
+
+  .level-name-container {
+    margin-top: 3%;
+    width: 95%;
+  }
+
+  .level-description {
+    padding: 0 1%;
+  }
+
+}

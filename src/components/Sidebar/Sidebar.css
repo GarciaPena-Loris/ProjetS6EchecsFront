@@ -1,0 +1,39 @@
+/* Position and sizing of burger button */
+.bm-burger-button {
+    position: fixed;
+    width: 36px;
+    height: 30px;
+    left: 20px;
+    top: 17px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+    background: var(--couleur-theme);
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+    background: var(--couleur-theme-fonce);
+}
+
+
+.bm-menu {
+    background: #030405e7;
+    padding: 5em 1.5em 0;
+    font-size: 1.15em;
+}
+
+.hr-buger {
+    width: 50px;
+}
+
+.menu-burger {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-burger {
+        display: block;
+    }
+}

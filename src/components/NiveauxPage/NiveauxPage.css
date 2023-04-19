@@ -1,0 +1,72 @@
+.level-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 20rem;
+    color: #fff;
+}
+
+.level-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.level-label {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.level-elo {
+    font-size: 1rem;
+}
+
+.level-jeux {
+    width: 100%;
+}
+
+@media (max-width: 1800px) {
+    .level-container {
+        padding: 0 1rem;
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .level-container {
+        padding: 0 0;
+    }
+
+    .level-header {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 3% 0;
+    }
+
+    .level-header>.level-label {
+        order: 1;
+        /* élément 2 */
+    }
+
+    .level-header>.level-elo {
+        order: 3;
+        /* élément 3 */
+    }
+
+    .level-header>*:first-child,
+    .level-header>*:last-child {
+        order: 2;
+        /* éléments 1 et 4 */
+    }
+
+
+    .level-label {
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+
+}

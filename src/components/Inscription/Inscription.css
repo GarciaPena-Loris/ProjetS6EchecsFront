@@ -1,0 +1,75 @@
+.container-inscription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.password-container {
+    display: flex;
+    width: 92%;
+}
+
+
+.show-password:hover {
+    color: var(--couleur-theme);
+    border-color: var(--couleur-theme);
+}
+
+.form-inscription {
+    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    background-color: #262421;
+    width: 23em;
+    border-radius: 30px;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2%;
+}
+
+
+.input-inscription {
+    padding: 0;
+    padding-left: 10px;
+    height: 2em;
+    width: 90%;
+    margin-top: 5%;
+    display: block;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+    color: #ffffff;
+    font-size: 20px;
+    font-display: center;
+    background-color: #312e2b;
+}
+
+.info {
+    font-size: 12px;
+    color: var(--couleur-theme);
+    margin-top: 5px;
+}
+
+.val-bouton {
+    margin-top: 7%;
+}
+
+.errors {
+    font-size: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ece9ea;
+    color: #a31927;
+    padding: 8px;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .form-inscription {
+        width: 15em;
+    }
+}

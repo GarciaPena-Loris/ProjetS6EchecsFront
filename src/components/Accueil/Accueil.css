@@ -1,0 +1,46 @@
+.accueil {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.boutons-connexion {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.space {
+  width: 2%;
+}
+
+.img {
+  width: 50% !important;
+  border-radius: 50%;
+  margin: 50px 0;
+}
+
+.bienvenue {
+  font-size: 4rem;
+  color: var(--couleur-theme);
+}
+
+
+@media screen and (max-width: 768px) {
+  .bienvenue {
+    font-size: 2.5rem;
+  }
+
+  .img {
+    width: 70% !important;
+  }
+}
+
+@media (max-height: 650px) {
+  .img {
+    display: none;
+  }
+
+}

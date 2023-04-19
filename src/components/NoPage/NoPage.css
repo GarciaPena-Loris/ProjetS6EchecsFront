@@ -1,0 +1,23 @@
+.no-page {
+    color: var(--couleur-erreur);
+    font-size: x-large;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.no-page-img {
+    width: 60%;
+    height: 60%;
+}
+
+
+@media screen and (max-width: 768px) {
+    .no-page-img {
+        width: 80%;
+        height: 80%;
+    }
+
+}
