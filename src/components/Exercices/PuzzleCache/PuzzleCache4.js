@@ -334,7 +334,7 @@ class PuzzleCache4 extends React.Component {
         const { inputValue, chess } = this.state;
 
         if (inputValue === this.languageCoup) {
-            Howler.volume(0.5);
+            Howler.volume(1);
             this.soundWin.play();
             const message = `Bonne réponse ! La réponse était bien ${inputValue}. Vous gagné ${this.pointsGagne} points.`;
             this.points = this.pointsGagne;

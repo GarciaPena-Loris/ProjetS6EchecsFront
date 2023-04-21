@@ -455,7 +455,7 @@ class Notation2 extends React.Component {
         this.soundUp.play();
         const { inputValue } = this.state;
         if (inputValue === this.coup || inputValue === this.coupAlternatif) {
-            Howler.volume(0.5);
+            Howler.volume(1);
             this.soundWin.play();
             if (this.state.showIncorrect)
                 this.points = 0;

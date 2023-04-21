@@ -290,7 +290,7 @@ class Notation9 extends React.Component {
             this.pieceDrop.play();
 
             setTimeout(() => {
-                Howler.volume(0.5);
+                Howler.volume(1);
                 this.soundWin.play();
 
                 this.points = this.pointsGagnes;

@@ -428,7 +428,7 @@ class Notation5 extends React.Component {
             (this.indexCoup === 2 && inputValue === PlanguageCoup) ||
             (this.indexCoup === 5 && inputValue === PlanguageCoup) ||
             (this.indexCoup === 6 && inputValue === PlanguageCoup)) {
-            Howler.volume(0.5);
+            Howler.volume(1);
             this.soundWin.play();
             if (this.state.showIncorrect)
                 this.points = 0;

@@ -361,7 +361,7 @@ class Bombe1 extends React.Component {
                 }
                 else {
                     var text = "Bravo, vous êtes arrivé sans exploser ! Vous gagnez " + this.pointsGagnes + " points.";
-                    Howler.volume(0.5);
+                    Howler.volume(1);
                     this.soundWin.play();
                     this.points = this.pointsGagnes;
                     this.setState({ message: text, showCorrect: true });

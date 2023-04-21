@@ -383,7 +383,6 @@ class Notation4 extends React.Component {
 
     genererPieceAleatoire = () => {
         const { chess } = this.state;
-        this.showedOrientation = false;
         this.coups = [];
         const alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
 
@@ -595,11 +594,12 @@ class Notation4 extends React.Component {
         this.soundUp.play();
         const { inputValue } = this.state;
         if (this.coups.includes(inputValue) || this.coupAlternatif.includes(inputValue)) {
-            Howler.volume(0.5);
+            Howler.volume(1);
             this.soundWin.play();
             this.points = this.pointsGagnes;
             if (this.showedOrientation) {
                 this.points = this.points/2;
+                this.showedOrientation = false;
             }
             if (this.state.showIncorrect)
                 this.points = 0;
