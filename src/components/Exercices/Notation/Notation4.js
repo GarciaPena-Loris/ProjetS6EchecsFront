@@ -383,6 +383,8 @@ class Notation4 extends React.Component {
 
     genererPieceAleatoire = () => {
         const { chess } = this.state;
+        this.showedOrientation = false;
+        this.setState({ coordonnees: false });
         this.coups = [];
         const alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
 
@@ -599,7 +601,6 @@ class Notation4 extends React.Component {
             this.points = this.pointsGagnes;
             if (this.showedOrientation) {
                 this.points = this.points/2;
-                this.showedOrientation = false;
             }
             if (this.state.showIncorrect)
                 this.points = 0;
