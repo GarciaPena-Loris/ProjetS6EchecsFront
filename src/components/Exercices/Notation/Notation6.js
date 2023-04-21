@@ -321,7 +321,7 @@ class Notation6 extends React.Component {
         this.soundUp.play();
         const { inputValue } = this.state;
         if (inputValue === this.languageCoup || (this.piece === 'P' && inputValue === 'P' + this.languageCoup)) {
-            Howler.volume(0.2);
+            Howler.volume(0.5);
             this.soundWin.play();
             this.points = this.pointsGagnes;
             if (this.showedCoordonnees) {

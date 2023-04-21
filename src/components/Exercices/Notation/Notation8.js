@@ -263,7 +263,7 @@ class Notation8 extends React.Component {
             this.pieceDrop.play();
 
             setTimeout(() => {
-                Howler.volume(0.2);
+                Howler.volume(0.5);
                 this.soundWin.play();
 
                 const text = `Bonne réponse ! Vous avez effecuté le bon mouvement, vous gagné ${this.pointsGagnes} points.`;

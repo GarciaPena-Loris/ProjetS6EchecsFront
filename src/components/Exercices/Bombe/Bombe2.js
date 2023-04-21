@@ -454,7 +454,7 @@ class Bombe2 extends React.Component {
                         this.points = Math.floor(this.pointsGagnes / 2);
                     }
                     var text = "Bravo, vous êtes arrivé sans exploser ! Vous gagnez " + this.points + " points.";
-                    Howler.volume(1);
+                    Howler.volume(0.5);
                     this.soundWin.play();
                     this.setState({ message: text, showCorrect: true });
                     setTimeout(() => { // regere plateau apres 3 sec

@@ -73,9 +73,6 @@ class Notation3 extends React.Component {
 
     componentDidMount() {
         this.genererPieceAleatoire();
-        if (Math.random() < 0.5) {
-            this.setState({ orientation: "black" });
-        }
         this.monInputRef.current.focus();
     }
 
@@ -398,11 +395,12 @@ class Notation3 extends React.Component {
             chess.load('kK6/8/8/8/8/8/8/8 b -- - 0 1');
             chess.remove('a8');
             chess.remove('b8');
-
+            this.setState({ orientation: "black" });
         }
         else {
             coulP = 'w';
             coulM = 'b';
+            this.setState({ orientation: "white" });
         }
 
         // premiere etape choisir piece
@@ -594,7 +592,7 @@ class Notation3 extends React.Component {
         this.soundUp.play();
         const { inputValue } = this.state;
         if (this.coups.includes(inputValue) || this.coupAlternatif.includes(inputValue)) {
-            Howler.volume(0.2);
+            Howler.volume(0.5);
             this.soundWin.play();
             if (this.state.showIncorrect)
                 this.points = 0;

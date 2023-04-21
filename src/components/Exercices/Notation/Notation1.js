@@ -189,7 +189,7 @@ class Notation extends React.Component {
     this.soundUp.play();
     const { inputValue } = this.state;
     if (inputValue === this.coup) {
-      Howler.volume(0.2);
+      Howler.volume(0.5);
       this.soundWin.play();
       if (this.state.showIncorrect)
         this.points = 0;

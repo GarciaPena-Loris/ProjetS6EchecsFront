@@ -75,9 +75,6 @@ class Notation4 extends React.Component {
 
     componentDidMount() {
         this.genererPieceAleatoire();
-        if (Math.random() < 0.5) {
-            this.setState({ orientation: "black" });
-        }
         this.monInputRef.current.focus();
     }
 
@@ -386,6 +383,7 @@ class Notation4 extends React.Component {
 
     genererPieceAleatoire = () => {
         const { chess } = this.state;
+        this.showedOrientation = false;
         this.coups = [];
         const alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
 
@@ -400,11 +398,12 @@ class Notation4 extends React.Component {
             chess.load('kK6/8/8/8/8/8/8/8 b -- - 0 1');
             chess.remove('a8');
             chess.remove('b8');
-
+            this.setState({ orientation: "black" });
         }
         else {
             coulP = 'w';
             coulM = 'b';
+            this.setState({ orientation: "white" });
         }
 
         // premiere etape choisir piece
@@ -446,7 +445,7 @@ class Notation4 extends React.Component {
         // trouver le coup
         let coup = '';
 
-        if (piece === 'N' && colonneP !== colonneA && ligneP !== ligneA) {
+        if (colonneP !== colonneA && ligneP !== ligneA) {
             // cas 1
             coup += this.state.piecesLanguage[this.indexPiece];
             coup += ligneP;
@@ -596,7 +595,7 @@ class Notation4 extends React.Component {
         this.soundUp.play();
         const { inputValue } = this.state;
         if (this.coups.includes(inputValue) || this.coupAlternatif.includes(inputValue)) {
-            Howler.volume(0.3);
+            Howler.volume(0.5);
             this.soundWin.play();
             this.points = this.pointsGagnes;
             if (this.showedOrientation) {
