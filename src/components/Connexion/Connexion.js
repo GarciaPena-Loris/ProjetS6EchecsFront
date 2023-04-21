@@ -47,7 +47,7 @@ export default function Connexion() {
         var config = {
             method: 'put',
             maxBodyLength: Infinity,
-            url: 'http://localhost:3001/users/signin',
+            url: 'https://echec.herokuapp.com/users/signin',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
@@ -63,7 +63,7 @@ export default function Connexion() {
                 var config = {
                     method: 'get',
                     maxBodyLength: Infinity,
-                    url: `http://localhost:3001/users/globalElo/${name}`,
+                    url: `https://echec.herokuapp.com/users/globalElo/${name}`,
                     headers: {
                         'Authorization': `Bearer ${response.data.token}`,
                         'Content-Type': 'application/x-www-form-urlencoded'

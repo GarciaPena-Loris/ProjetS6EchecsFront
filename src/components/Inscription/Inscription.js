@@ -69,7 +69,7 @@ export default function Inscription() {
         var config = {
             method: 'post',
             maxBodyLength: Infinity,
-            url: 'http://localhost:3001/users/signup',
+            url: 'https://echec.herokuapp.com/users/signup',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },

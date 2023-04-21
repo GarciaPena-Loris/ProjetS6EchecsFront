@@ -33,7 +33,7 @@ export default function SelectionExercices() {
         var config = {
             method: 'get',
             maxBodyLength: Infinity,
-            url: 'http://localhost:3001/exercises',
+            url: 'https://echec.herokuapp.com/exercises',
             headers: {
                 'Authorization': `Bearer ${token}`
             }

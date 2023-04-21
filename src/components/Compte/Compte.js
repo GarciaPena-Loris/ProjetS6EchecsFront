@@ -81,7 +81,7 @@ export default function Compte() {
         // Envoyer une requête PUT à l'API pour mettre à jour l'URL de l'image dans la base de données
         const config = {
             method: "put",
-            url: `http://localhost:3001/users/updateAvatar/` + name,
+            url: `https://echec.herokuapp.com/users/updateAvatar/` + name,
             headers: {
                 "Authorization": `Bearer ${token}`,
                 'Content-Type': 'application/json'
@@ -115,7 +115,7 @@ export default function Compte() {
         var config = {
             method: 'get',
             maxBodyLength: Infinity,
-            url: 'http://localhost:3001/users/' + name,
+            url: 'https://echec.herokuapp.com/users/' + name,
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -138,7 +138,7 @@ export default function Compte() {
         var config = {
             method: 'get',
             maxBodyLength: Infinity,
-            url: 'http://localhost:3001/exercises',
+            url: 'https://echec.herokuapp.com/exercises',
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -163,7 +163,7 @@ export default function Compte() {
                 var config = {
                     method: 'get',
                     maxBodyLength: Infinity,
-                    url: 'http://localhost:3001/levels/maxElo/' + i,
+                    url: 'https://echec.herokuapp.com/levels/maxElo/' + i,
                     headers: {
                         'Authorization': `Bearer ${token}`
                     }
@@ -179,7 +179,7 @@ export default function Compte() {
                 var config2 = {
                     method: 'get',
                     maxBodyLength: Infinity,
-                    url: 'http://localhost:3001/eloExercise/elo/' + name + '/' + i,
+                    url: 'https://echec.herokuapp.com/eloExercise/elo/' + name + '/' + i,
                     headers: {
                         'Authorization': `Bearer ${token}`
                     }

@@ -55,7 +55,7 @@ export default function ExercicePage() {
         var config = {
             method: 'get',
             maxBodyLength: Infinity,
-            url: 'http://localhost:3001/levels/allLevels/' + exerciceId,
+            url: 'https://echec.herokuapp.com/levels/allLevels/' + exerciceId,
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -77,7 +77,7 @@ export default function ExercicePage() {
         let config = {
             method: 'get',
             maxBodyLength: Infinity,
-            url: 'http://localhost:3001/eloExercise/elo/' + name + "/" + exerciceId,
+            url: 'https://echec.herokuapp.com/eloExercise/elo/' + name + "/" + exerciceId,
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -97,7 +97,7 @@ export default function ExercicePage() {
         let config = {
             method: 'get',
             maxBodyLength: Infinity,
-            url: 'http://localhost:3001/unlockLevel/' + name,
+            url: 'https://echec.herokuapp.com/unlockLevel/' + name,
             headers: {
                 'Authorization': `Bearer ${token}`
             }

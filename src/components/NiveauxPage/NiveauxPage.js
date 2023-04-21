@@ -67,7 +67,7 @@ export default function NiveauxPage() {
                 var config = {
                     method: 'get',
                     maxBodyLength: Infinity,
-                    url: `http://localhost:3001/eloExercise/elo/${name}/${exercice.id}`,
+                    url: `https://echec.herokuapp.com/eloExercise/elo/${name}/${exercice.id}`,
                     headers: {
                         'Authorization': `Bearer ${sessionStorage.token}`,
                         'Content-Type': 'application/x-www-form-urlencoded'
@@ -92,7 +92,7 @@ export default function NiveauxPage() {
         let config = {
             method: 'get',
             maxBodyLength: Infinity,
-            url: 'http://localhost:3001/unlockLevel/' + name,
+            url: 'https://echec.herokuapp.com/unlockLevel/' + name,
             headers: {
                 'Authorization': `Bearer ${sessionStorage.token}`
             }

@@ -204,7 +204,7 @@ class Notation7 extends React.Component {
             var config = {
                 method: 'put',
                 maxBodyLength: Infinity,
-                url: `http://localhost:3001/unlockLevel/save/${this.name}/${this.idExercice}`,
+                url: `https://echec.herokuapp.com/unlockLevel/save/${this.name}/${this.idExercice}`,
                 headers: {
                     'Authorization': `Bearer ${sessionStorage.token}`,
                     'Content-Type': 'application/x-www-form-urlencoded'
