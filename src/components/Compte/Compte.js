@@ -53,10 +53,10 @@ export default function Compte() {
         navigate('/');
     };
 
-    const handleExerciceClick = (exercice) => {
+    const handleExerciceClick = (exercice, index) => {
         Howler.volume(0.3);
         soundUp.play();
-        navigate('/exercices', { state: { exercice: exercice } });
+        navigate('/exercices', { state: { exercice: exercice, index: index } });
     };
 
     const imageList = [
@@ -246,13 +246,13 @@ export default function Compte() {
             </button>
             <div className="image-container-compte">
                 <h1 className="titre">Progression :</h1>
-                {dataExos.map((exercice) => (
+                {dataExos.map((exercice, index) => (
                     <div className="img-wrapper-compte" key={exercice.id}>
                         <img
                             className="imgExo-compte"
                             src={`${exercice.image}`}
                             alt={`Exercice ${exercice.id}`}
-                            onClick={() => handleExerciceClick(exercice)}
+                            onClick={() => handleExerciceClick(exercice, (index+1))}
                             onMouseEnter={() => handlePieceHover()}
                         />
                         <div className="nomxp-div">
